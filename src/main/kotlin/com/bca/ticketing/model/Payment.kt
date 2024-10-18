@@ -4,10 +4,11 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 
-@Table(value="tickets")
-data class Ticket(
+@Table(value="payments")
+data class Payment(
     @Id val id: Long?,
-    val userId: Long,
-    val routeId: Long,
-    val status: String,
+    val ticketId: Long,
+    val amount: Double,
+    val status: String
+
 )
