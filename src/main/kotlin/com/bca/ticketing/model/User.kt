@@ -1,13 +1,12 @@
 package com.bca.ticketing.model
 
 import org.springframework.data.annotation.Id
-import org.springframework.data.relational.core.mapping.Column
 import org.springframework.data.relational.core.mapping.Table
 
-@Table(value="users")
+@Table("users")
 data class User(
-    @Id val id: Long?,
+    @Id val id: Long? = null,
     val name: String,
-    val email: String
-
+    val email: String,
+    var balance: Double
 )
